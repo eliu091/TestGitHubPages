@@ -4,6 +4,7 @@ body {
 
 .noScroll {
   overflow: hidden;
+  position: fixed;
 }
 
 .body-wrapper {
@@ -40,3 +41,4 @@ body {
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
 }
+

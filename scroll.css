@@ -38,7 +38,7 @@ body {
 }
 
 #filterOptionsContainer {
-  overflow-y: scroll;
+  /*overflow-y: scroll;*/
   -webkit-overflow-scrolling: touch;
 }
 

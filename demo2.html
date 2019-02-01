@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Demo</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <style type="text/css">
+  /*<![CDATA[*/
+        .box {
+            height: 100px;
+            width: 100px;
+            border: 1px solid;
+            margin: 20px;
+            background-color: red;
+            color: white;
+            text-align: center;
+            vertical-align: middle;
+        }
+  /*]]>*/
+  </style>
+</head>
+<body>
+  <button id="btn-start">Start</button>
+  <div id="box-1" class="box">
+    Box  - simulate JS execution
+  </div>
+  <script type="text/javascript">
+    $(function () {
+      $("#btn-start").click(function(){
+            sleepFor(10000);
+
+      		$('#box-1').css('background-color','green');
+      });
+    });
+    function sleepFor( sleepDuration ){
+	    var now = new Date().getTime();
+	    while(new Date().getTime() < now + sleepDuration){ /* do nothing */ } 
+	}
+  </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Demo</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <style type="text/css">
+  /*<![CDATA[*/
+        .box {
+            height: 100px;
+            width: 100px;
+            border: 1px solid;
+            margin: 20px;
+            background-color: red;
+            color: white;
+            text-align: center;
+            vertical-align: middle;
+        }
+  /*]]>*/
+  </style>
+</head>
+<body>
+  <button id="btn-start">Start</button>
+  Counter - <span id="counter"></span>
+  <div id="box-1" class="box">
+    Box 1 - setTimeOut
+  </div>
+  <div id="box-2" class="box">
+    Box 2 - setInterval
+  </div>
+  <div id="box-3" class="box">
+    Box 4 - direct execute
+  </div>
+  <script type="text/javascript">
+    $(function () {
+      var counter = 1;
+      $("#btn-start").click(function(){
+
+	      	setInterval(function(){
+	            $('#counter').text(counter);
+	            counter++;
+	      	}, 1000);
+
+            setTimeout(function(){
+            	$('#box-1').css('background-color','green');
+            }, 10000);
+
+	      	setInterval(function(){
+	            $('#box-2').css('background-color','green');
+	            clearInterval();
+	      	}, 10000);
+
+      		$('#box-3').css('background-color','green');
+      });
+    });
+  </script>
+</body>
+</html>
